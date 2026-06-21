@@ -1,0 +1,1474 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn {
+  padding: 1rem 1rem;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  display: inline-block;
+  text-decoration: none;
+}
+.btnPrimary {
+  background: #B92770;
+  color: white;
+}
+.btnOutLine {
+  border: 1px solid #B92770;
+  color: #B92770;
+}
+
+.footer {
+  background: white;
+}
+.footerBenefits {
+  padding: 2rem 0;
+  background: grey;
+  color: white;
+}
+.footerBenefits .benefitsList {
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  text-align: center;
+}
+.footerBenefits .benefitsList .item {
+  display: flex;
+  align-items: center;
+}
+.footerBenefits .benefitsList img {
+  width: 4.5rem;
+  height: auto;
+}
+.footer .information {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
+  padding: 3rem 0;
+}
+.footer .information .footerColumn ul {
+  list-style: none;
+  padding-top: 2rem;
+}
+.footer .information .footerColumn ul li {
+  margin-bottom: 0.5rem;
+}
+.footer .information .footerColumn.lastColumn {
+  grid-column: 5/7;
+}
+.footer .information .footerColumn.lastColumn h3 {
+  margin-bottom: 2rem;
+}
+.footer .otherInfromation {
+  padding: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+.footer .otherInfromation .shippingInformation {
+  flex: 2;
+}
+.footer .otherInfromation .shippingInformation h3 {
+  margin-bottom: 1rem;
+}
+.footer .otherInfromation .contactDetails {
+  flex: 1;
+  min-width: 250px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 2rem;
+  line-height: 1.5;
+}
+.footer .otherInfromation .contactDetails .communication {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.footer .otherInfromation .contactDetails .communication .item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.footer .otherInfromation .contactDetails .communication .item img {
+  width: 1.7rem;
+  height: auto;
+}
+.footer .otherInfromation .contactDetails .communication .item p {
+  font-size: 0.8rem;
+}
+.footer .otherInfromation .contactDetails .workingHours {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.footer .otherInfromation .contactDetails .workingHours .item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.footer .otherInfromation .contactDetails .workingHours .item img {
+  width: 1.7rem;
+  height: auto;
+}
+.footer .otherInfromation .contactDetails .workingHours .item p {
+  font-size: 0.8rem;
+}
+.footer .copyright {
+  text-align: center;
+  padding: 1rem;
+  color: grey;
+}
+.footer a {
+  text-decoration: none;
+  color: black;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: white;
+  border-bottom: 1px solid #f5f3f3;
+}
+.header .socials {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+.header .socials img {
+  width: 1.5rem;
+  height: auto;
+}
+.header .headerActions a {
+  position: relative;
+  display: inline-block;
+}
+.header .headerActions a img {
+  width: 1.5rem;
+  height: auto;
+  display: block;
+}
+.header .headerActions a .cartCount {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: white;
+  color: #B92770;
+  font-size: 0.75rem;
+  min-width: 18px;
+  height: 18px;
+  border: 2px solid #B92770;
+  border-radius: 1rem;
+  display: none;
+}
+.header .headerActions a .cartCount.visible {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.headerLogo {
+  display: flex;
+  font-weight: bold;
+  color: #B92770;
+  font-size: 2rem;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  .headerLogo {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .headerLogo {
+    font-size: 1rem;
+  }
+}
+.headerLogo .logoIcon {
+  width: 2rem;
+  height: auto;
+  border-radius: 6px;
+  background: #B92770;
+  margin-right: 0.5rem;
+}
+.headerActions {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav {
+  border-top: 1px solid #f5f3f3;
+}
+.navList {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+  justify-content: center;
+  list-style: none;
+  font-weight: bold;
+  margin-left: 3rem;
+}
+.nav a {
+  color: #000000;
+  text-decoration: none;
+}
+@media (max-width: 1024px) {
+  .nav a {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .nav a {
+    font-size: 0.8rem;
+  }
+}
+.nav a:hover {
+  color: #B92770;
+}
+
+.aboutBanner {
+  height: 40rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.322)), url("../src/assets/images/About Us/banner image.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+@media (max-width: 1024px) {
+  .aboutBanner {
+    height: 30rem;
+  }
+}
+@media (max-width: 768px) {
+  .aboutBanner {
+    height: 22rem;
+  }
+}
+
+.aboutBannerContent {
+  position: relative;
+  text-align: center;
+}
+.aboutBannerContent h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+@media (max-width: 1024px) {
+  .aboutBannerContent {
+    height: 30rem;
+  }
+}
+@media (max-width: 768px) {
+  .aboutBannerContent {
+    height: 22rem;
+  }
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  text-align: center;
+  padding: 3rem 0;
+}
+.benefitsGrid h3 {
+  margin-bottom: 0.8rem;
+}
+@media (max-width: 1024px) {
+  .benefitsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.imageBlock {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-bottom: 1rem;
+  background-color: #B92770;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageBlock img {
+  width: 2.5rem;
+}
+
+.newArrival {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 3rem 0;
+}
+@media (max-width: 768px) {
+  .newArrival {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+.arrivalContent {
+  height: 100%;
+}
+.arrivalContent h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+.arrivalContent p {
+  color: grey;
+  margin-bottom: 1.5rem;
+}
+.arrivalContent .btn {
+  background-color: #B92770;
+  color: white;
+  margin-top: 1rem;
+}
+
+.arrivalImage {
+  width: 100%;
+}
+
+.aboutTeam {
+  padding: 3rem 0;
+  text-align: center;
+}
+.aboutTeam h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 1000;
+  border-bottom: 2px solid #B92770;
+  display: inline-block;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 1024px) {
+  .teamGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .teamGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.teamCard img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.teamCard h4 {
+  margin-bottom: 2rem;
+}
+
+#contactBanner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.322)), url("../src/assets/images/Contact Us/banner image.jpg");
+}
+
+.benefitItem p {
+  color: grey;
+  font-size: 0.9rem;
+}
+
+#contacImage {
+  width: 1.8rem;
+}
+
+.contact {
+  padding: 4rem 0;
+}
+.contact .contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 768px) {
+  .contact .contactGrid {
+    padding: 2rem 0;
+  }
+}
+.contact .contactImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-height: 36rem;
+}
+.contact .contactForm h2 {
+  margin-bottom: 1rem;
+}
+.contact .contactForm p {
+  margin-bottom: 2rem;
+  font-size: 14px;
+  color: #666;
+}
+.contact .contactForm label {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.contact .contactForm label span {
+  color: #B92770;
+}
+.contact .contactForm input, .contact .contactForm textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #B92770;
+  margin-top: 0.4rem;
+  font-size: 14px;
+}
+.contact .contactForm textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+.contact .contactForm button {
+  margin-top: 1rem;
+  width: 120px;
+  background: #B92770;
+  color: white;
+}
+.contact .contactForm #contactFeedback {
+  margin-top: 1rem;
+  font-size: 14px;
+}
+
+.cartBanner {
+  height: 10rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5)), url("../src/assets/images/My Cart/banner image.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-bottom: 4rem;
+}
+.cartBanner h2 {
+  font-size: 2rem;
+}
+
+.cartHeader {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
+  padding: 1rem 0;
+  background: grey;
+  color: white;
+}
+.cartHeader span {
+  display: flex;
+  justify-content: center;
+}
+
+.cartRow {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 2px solid #B92770;
+  padding-left: 3rem;
+}
+.cartRow img {
+  width: 6rem;
+  object-fit: cover;
+}
+.cartRow span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: scenter;
+  font-weight: bold;
+}
+.cartRow .quantityControl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+.cartRow .quantityControl button {
+  background: white;
+  border: none;
+  font-size: 1.4rem;
+  margin: 1rem;
+  cursor: pointer;
+}
+.cartRow .delete {
+  background: white;
+  border: none;
+  cursor: pointer;
+  color: #B92770;
+  font-size: 2rem;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cartOptions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 2rem;
+}
+.cartOptions button {
+  color: white;
+  background: #B92770;
+  font-size: 1rem;
+}
+.cartOptions a {
+  color: white;
+  background: #B92770;
+  font-size: 1rem;
+}
+
+.cartSummary {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  background: #444;
+  color: white;
+  padding: 2rem;
+  width: 30rem;
+}
+.cartSummary p {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+  border-bottom: 2px solid #B92770;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.cartSummary P:last-of-type {
+  font-size: 1.2rem;
+}
+.cartSummary button {
+  margin-top: 1rem;
+  color: white;
+  background: #B92770;
+  width: 12rem;
+}
+
+.cartSummary p#discountRow.hidden {
+  display: none;
+}
+
+#message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.catalogTop {
+  margin-left: 12rem;
+  margin-right: 12rem;
+}
+
+.catalogFilters {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  border-top: 1px solid #B92770;
+  border-bottom: 1px solid #B92770;
+}
+.catalogFilters.hidden {
+  display: none;
+}
+.catalogFilters .filter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.catalogFilters .filter label {
+  font-weight: 600;
+}
+.catalogFilters .filter select {
+  padding: 0.5rem;
+  border: 1px solid gainsboro;
+  background: white;
+}
+.catalogFilters .filter input[type=checkbox] {
+  appearance: none;
+  margin-top: 0.5rem;
+  align-self: flex-start;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 2px solid gainsboro;
+  padding: 1.5px;
+}
+.catalogFilters .filter input[type=checkbox]:checked {
+  background-color: black;
+  background-clip: content-box;
+}
+
+.catalogFilterPanels {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.catalogFilterPanels .btn {
+  background: #B92770;
+  color: white;
+  width: 10rem;
+}
+
+.catalogOptions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.catalogResults {
+  font-size: 0.9rem;
+  color: grey;
+}
+
+.catalogCOntrols {
+  display: flex;
+  gap: 1rem;
+}
+.catalogCOntrols select, .catalogCOntrols input {
+  padding: 0.5rem 2rem;
+  padding-left: 0.2rem;
+  background: white;
+  border: 1px solid gainsboro;
+  color: grey;
+}
+
+.catalogContent {
+  margin-left: 12rem;
+  margin-right: 5rem;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+}
+
+.catalogProducts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding-top: 2rem;
+}
+
+.productCard {
+  position: relative;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.productCard img {
+  width: 100%;
+  height: auto;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+}
+.productCard h3 {
+  font-size: 1rem;
+  margin: 0.5rem;
+}
+.productCard p {
+  font-weight: bold;
+  color: gray;
+  margin-bottom: 0.5rem;
+}
+.productCard .btn {
+  background: #B92770;
+  color: white;
+  padding: 0.5rem;
+  margin-top: auto;
+  width: fit-content;
+  align-self: center;
+}
+.productCard .sale {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #B92770;
+  color: white;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+}
+
+.catalogSideBar h3 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.catalogSideBar .bestSets {
+  display: felx;
+  flex-direction: column;
+  gap: 1rem;
+}
+.catalogSideBar .bestSetItem {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.catalogSideBar .bestSetImg {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 4px;
+  padding: 4px;
+}
+.catalogSideBar .bestSetInfo {
+  font-size: 0.8rem;
+}
+
+.pagination {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  margin-left: 12rem;
+  margin-right: 26rem;
+}
+.pagination button {
+  padding: 0.5rem 1rem;
+  background: white;
+  cursor: pointer;
+  border: none;
+}
+.pagination .catalogPrevious {
+  justify-self: start;
+  border: 2px solid #B92770;
+}
+.pagination .catalogPrevious:hover {
+  background: #B92770;
+  color: white;
+}
+.pagination .catalogNext {
+  justify-self: end;
+  border: 2px solid #B92770;
+}
+.pagination .catalogNext:hover {
+  background: #B92770;
+  color: white;
+}
+
+.productDetailsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 3rem 0;
+  gap: 2rem;
+}
+
+.mainImage {
+  width: 100%;
+  border-radius: 3px;
+  max-height: 46rem;
+  object-fit: contain;
+  padding-bottom: 1rem;
+}
+
+.otherImages {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.otherImages img {
+  width: 123px;
+  height: auto;
+  border-radius: 3px;
+}
+
+.productName {
+  font-size: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.productRating {
+  color: gold;
+  font-size: 1.4rem;
+}
+
+.productPrice {
+  font-weight: 720;
+  padding-top: 0.2rem;
+}
+
+.productDescription {
+  color: gray;
+  line-height: 1.5;
+  padding-top: 2rem;
+  text-align: justify;
+}
+
+.optionTitle {
+  padding-top: 1.2rem;
+  padding-bottom: 0.8rem;
+}
+
+.productSize, .productColor, .productCategory {
+  width: 100%;
+  border: 1px solid gainsboro;
+  background: white;
+  color: gray;
+  padding: 0.5rem;
+  border-radius: 3px;
+}
+
+.productCount {
+  display: flex;
+  gap: 1rem;
+  margin-top: 4rem;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  border: 2px solid #B92770;
+}
+.quantity button {
+  width: 40px;
+  height: 40px;
+  font-weight: bold;
+  background: white;
+  border: none;
+}
+
+.addToCart {
+  width: 100%;
+  background: #B92770;
+  color: white;
+  margin: 1rem 0;
+}
+
+.payment {
+  display: flex;
+  color: gray;
+  padding-top: 2rem;
+  gap: 1rem;
+}
+.payment img {
+  max-height: 2rem;
+}
+
+.tabsHeader {
+  padding-top: 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 8rem;
+  margin-bottom: 1rem;
+}
+
+.tab {
+  cursor: pointer;
+  border: none;
+  background: white;
+  font-size: 1.1rem;
+  padding-bottom: 0.4rem;
+  font-weight: bold;
+}
+.tab.active {
+  border-bottom: 2px solid #B92770;
+}
+
+.tabContent {
+  display: none;
+}
+.tabContent.active {
+  display: block;
+}
+
+.youMayLike {
+  padding-top: 3rem;
+  text-align: center;
+}
+.youMayLike h2 {
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #B92770;
+  display: inline-block;
+}
+
+.relatedProducts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding-bottom: 3rem;
+}
+
+.productCard h4 {
+  padding-top: 2rem;
+}
+
+#details {
+  color: grey;
+}
+#details p {
+  padding-top: 1rem;
+  text-align: justify;
+}
+
+.reviewContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.reviewitem {
+  display: flex;
+  gap: 1rem;
+  margin-top: 6rem;
+}
+
+.reviewHeader {
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.reviewHeader .starCount {
+  margin-left: auto;
+}
+
+.reviewDate {
+  color: grey;
+  font-size: 0.8rem;
+  padding-left: 1rem;
+}
+
+.reviewContent p {
+  text-align: justify;
+  padding-right: 6rem;
+}
+
+.reviewAvatar {
+  margin-top: 1rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.togglePassword {
+  font-size: 30px;
+  color: gray;
+}
+
+.loginOption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.loginOption a {
+  margin-left: auto;
+  text-decoration: none;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+.loginOption label {
+  color: grey;
+}
+
+.reviewRating {
+  margin-top: 1rem;
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+}
+
+.starCount {
+  color: gold;
+  margin-left: 1rem;
+  line-height: 2;
+  font-size: 1.4rem;
+}
+.starCount span {
+  cursor: pointer;
+}
+
+.reviewNote {
+  padding-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.reviewForm textarea {
+  width: 100%;
+  height: 120px;
+  margin: 1rem 0;
+  border: 2px solid #B92770;
+  padding: 0.5rem;
+}
+
+.reviewInputs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.reviewInputs input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 2px solid #B92770;
+}
+
+.loginOption input[type=checkbox] {
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+#submitReview {
+  margin-top: 2rem;
+  background: #B92770;
+  color: white;
+  width: 6rem;
+  margin-bottom: 3rem;
+}
+
+.home {
+  background: white;
+}
+
+.hero {
+  background: rgb(180, 179, 179);
+  padding: 4rem 0 7rem;
+}
+.heroInner {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 4rem;
+}
+.heroContent p {
+  margin-bottom: 1.5rem;
+  width: 140%;
+}
+.heroContent h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.heroImage img {
+  width: 100%;
+  height: auto;
+  min-height: 24rem;
+  object-fit: contain;
+}
+
+.homeCardPromo {
+  margin-top: -4rem;
+}
+.homeCardPromoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+.homeCardPromoDiscount {
+  min-height: 30rem;
+  padding: 2rem;
+  background: rgb(112, 108, 108);
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5)), url("../src/assets/images/Homepage/suitcases main banner.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.homeCardPromoAbout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 30rem;
+  padding: 2rem;
+  background: #fff;
+}
+.homeCardPromoAuthor {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.homeCardPromoAuthor img {
+  width: 60px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.homeCardPromoAuthor h3 {
+  font-size: 1.2rem;
+}
+.homeCardPromoAuthor p {
+  font-size: 0.8rem;
+}
+.homeCardPromo h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+.homeCardPromo p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: grey;
+}
+.homeCardPromoDiscountContent h2 {
+  font-size: 2rem;
+}
+.homeCardPromoDiscountContent p {
+  color: white;
+}
+
+.homeSection {
+  padding: 4rem;
+  text-align: center;
+}
+.homeSection .sectionHeading {
+  margin-bottom: 2rem;
+}
+.homeSection .sectionHeading h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.homeSection .sectionHeading p {
+  font-size: 0.9rem;
+  color: grey;
+}
+
+.travelGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+.travelGrid .travelCard {
+  background: rgb(219, 209, 209);
+  min-height: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.travelGrid .travelCard p {
+  color: grey;
+  font-size: 0.9rem;
+}
+
+.productSection {
+  padding: 4rem;
+}
+.productSection .sectionHeading {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.productSection h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.productSection p {
+  font-size: 0.9rem;
+  color: grey;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.product {
+  padding: 1rem;
+  text-align: center;
+}
+.product img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  min-height: 200px;
+}
+.product h3 {
+  margin-top: 1rem;
+}
+.product p {
+  color: grey;
+  font-size: 0.9rem;
+  margin: 1rem;
+}
+
+.homeBanner {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.homeBannerInner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5)), url("../src/assets/images/Homepage/offer of the month image.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+.homeBannerInner > div:first-child {
+  flex: 0 0 50%;
+  text-align: center;
+  color: white;
+}
+.homeBannerInner > div:first-child .homeBannerText {
+  font-size: 12rem;
+  font-weight: bold;
+}
+.homeBannerInner > div:first-child p {
+  font-size: 0.9rem;
+}
+.homeBannerContent {
+  margin-left: auto;
+  flex: 0 0 40%;
+  color: white;
+}
+.homeBannerContent h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.homeBannerContent p {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.customersGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.customerCard {
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.customerCard img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+.customerCard p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.customerCard strong {
+  display: block;
+  font-size: 1.1rem;
+  color: #B92770;
+}
+
+.loginWindow {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1010;
+}
+.loginWindow.hidden {
+  display: none;
+}
+
+.loginOverlay {
+  position: absolute;
+  inset: 0;
+}
+
+.loginContent {
+  position: relative;
+  background: white;
+  padding: 3rem;
+  width: 500px;
+  border-radius: 5px;
+  z-index: 10;
+}
+.loginContent label {
+  display: block;
+  margin-top: 1rem;
+  font-size: 16px;
+}
+.loginContent label span {
+  color: #B92770;
+}
+.loginContent input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #B92770;
+  margin-top: 0.4rem;
+}
+
+.passwordWrapper {
+  position: relative;
+}
+.passwordWrapper .togglePassword {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.loginOption {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+  font-size: 13px;
+}
+.loginOption a {
+  color: #B92770;
+}
+
+.loginButton {
+  width: 100%;
+  margin-top: 1rem;
+  color: white;
+  background: #B92770;
+}
+
+.loginMessage {
+  margin-top: 1rem;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.travelSlider {
+  overflow: hidden;
+  position: relative;
+}
+
+.travelSlides {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.6s ease;
+}
+
+.travelCard {
+  min-width: calc(25% - 1rem);
+  height: 40rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.travelCard span,
+.travelCard p {
+  position: absolute;
+  left: 2rem;
+  color: white;
+}
+
+.travelCard span {
+  bottom: 12rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.travelCard p {
+  bottom: 8rem;
+  right: 2rem;
+  font-size: 1.1rem;
+  top: 30rem;
+  text-align: left;
+  line-height: 2rem;
+}
+
+.firstSuitcase {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url("../src/assets/images/Homepage/suitcase real-live.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.secondSuitcase {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url("../src/assets/images/Homepage/suitcase real-live-1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.thirdSuitcase {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url("../src/assets/images/Homepage/suitcase real-live-2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.forthSuitcase {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url("../src/assets/images/Homepage/suitcase real-live-3.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.fifthSuitcase {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url("../src/assets/images/Homepage/suitcase real-live.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (max-width: 1024px) {
+  .travelCard {
+    min-width: calc(50% - 10px);
+  }
+}
+@media (max-width: 768px) {
+  .travelCard {
+    min-width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

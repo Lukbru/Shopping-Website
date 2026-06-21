@@ -1,0 +1,24 @@
+{
+  "name": "fundamentals-project-ts-template",
+  "version": "1.0.0",
+  "description": "Capstone Project TS Template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo \"Dummy build script required for Autocode Compile\"",
+    "ts-compile": "npx tsc",
+    "dev": "sass src/scss/main.scss dist/style.css --watch & tsc --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "author": "Łukasz Bruzda",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "sass": "^1.99.0",
+    "typescript": "^6.0.2"
+  }
+}
