@@ -1,0 +1,111 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    border-bottom: 1px solid #f5f3f3;
+
+    .socials {
+        display: flex;
+        gap: 1rem;
+        padding: 0.5rem;
+        img {
+            width: 1.5rem;
+            height: auto;
+        }
+    }
+    .headerActions{
+        a {
+        position: relative;
+        display: inline-block;
+        img {
+            width: 1.5rem;
+            height: auto;
+            display: block;
+        }
+        .cartCount {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: white;
+            color: $primaryColor;
+            font-size: 0.75rem;
+            min-width: 18px;
+            height: 18px;
+            border: 2px solid $primaryColor;
+            border-radius: 1rem;
+            display: none;
+        }
+        .cartCount.visible {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;        
+        }
+    }
+}
+
+    &Container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    &Logo {
+        display: flex;
+        font-weight: bold;
+        color: $primaryColor;
+        font-size: 2rem;
+        text-decoration: none;
+        justify-content: center;
+        align-items: center;
+        @media (max-width: $tablet) {
+            font-size: 1.5rem;
+        }
+        @media (max-width: $mobile) {
+            font-size: 1rem;
+        }
+        .logoIcon {
+            width: 2rem;
+            height: auto;
+            border-radius: 6px;
+            background: $primaryColor;
+            margin-right: 0.5rem;
+        }
+    }
+
+    &Actions {
+        display: flex;
+        gap: 1rem;
+    }
+}
+.nav {
+    border-top: 1px solid #f5f3f3;
+
+    &List {
+        display: flex;
+        gap: 2rem;
+        padding: 1rem;
+        justify-content: center;
+        list-style: none;
+        font-weight: bold;
+        margin-left: 3rem;
+    }
+
+    a {
+        color: $textColor;
+        text-decoration: none;
+        @media (max-width: $tablet) {
+            font-size: 1.5rem;
+        }
+        @media (max-width: $mobile) {
+            font-size: 0.8rem;
+        }
+        &:hover {
+            color: $primaryColor;
+        }
+    }
+}

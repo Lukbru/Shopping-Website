@@ -1,0 +1,194 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+.aboutBanner {
+    height: 40rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.322)), url("../src/assets/images/About Us/banner image.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    @media (max-width: $tablet) {
+        height: 30rem;
+    }
+    @media (max-width: $mobile) {
+        height: 22rem;
+    }
+}
+.aboutBannerContent {
+    position: relative;
+    text-align: center;
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    @media (max-width: $tablet) {
+        height: 30rem;
+    }
+    @media (max-width: $mobile) {
+        height: 22rem;
+    }
+}
+
+.benefitsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    text-align: center;
+    padding: 3rem 0;
+    h3 {
+        margin-bottom: 0.8rem;
+    }
+    @media (max-width: $tablet) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $mobile) {
+        grid-template-columns: 1fr;
+    }
+}
+.imageBlock{
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-bottom: 1rem;
+    background-color: $primaryColor;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imageBlock img{
+    width: 2.5rem;
+}
+
+.newArrival {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    padding: 3rem 0;
+    @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+    text-align: center;
+    }
+}
+.arrivalContent {
+    height: 100%;
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+    p {
+        color: grey;
+        margin-bottom: 1.5rem;
+    }
+    .btn {
+        background-color: $primaryColor;
+        color:white;
+        margin-top: 1rem;
+    }
+}
+.arrivalImage {
+    width: 100%;
+}
+.aboutTeam {
+    padding: 3rem 0;
+    text-align: center;
+    h2 {
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        font-weight: 1000;
+        border-bottom: 2px solid $primaryColor;
+        display: inline-block;
+    }
+}
+.teamGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    @media (max-width: $tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+    }
+}
+.teamCard img {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.teamCard h4 {
+    margin-bottom: 2rem;
+}
+#contactBanner{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.322)), url("../src/assets/images/Contact Us/banner image.jpg");
+}
+.benefitItem {
+    p {
+        color: grey;
+        font-size: 0.9rem;
+    }
+}
+#contacImage {
+    width: 1.8rem;
+}
+.contact {
+  padding: 4rem 0;
+  .contactGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+
+    @media (max-width: $mobile) {
+      padding: 2rem 0;
+    }
+  }
+  .contactImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 36rem;
+  }
+  .contactForm {
+    h2 {
+      margin-bottom: 1rem;
+    }
+    p {
+      margin-bottom: 2rem;
+      font-size: 14px;
+      color: #666;
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      font-weight: bold;
+      span {
+        color: $primaryColor;
+      }
+    }
+    input,textarea {
+      width: 100%;
+      padding: 1rem;
+      border: 2px solid $primaryColor;
+      margin-top: 0.4rem;
+      font-size: 14px;
+    }
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+    button {
+      margin-top: 1rem;
+      width: 120px;
+      background: $primaryColor;
+      color: white;
+    }
+    #contactFeedback {
+      margin-top: 1rem;
+      font-size: 14px;
+    }
+  }
+}

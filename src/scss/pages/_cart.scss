@@ -1,0 +1,127 @@
+@use '../abstracts/variables' as *;
+.cartBanner{
+    height: 10rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5)), url("../src/assets/images/My Cart/banner image.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-bottom: 4rem;
+    h2 {
+        font-size: 2rem;
+    }
+}
+.cartHeader{
+    display: grid;
+    grid-template-columns: (1fr 2fr 1fr 1fr 1fr 1fr);
+    padding: 1rem 0;
+    background: grey;
+    color: white;
+    span {
+        display: flex;
+        justify-content: center;
+    }
+
+}
+.cartRow {
+    display: grid;
+    grid-template-columns: (1fr 2fr 1fr 1fr 1fr 1fr);
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 2px solid $primaryColor;
+    padding-left: 3rem;
+    img {
+        width: 6rem;
+        object-fit: cover;
+    }
+    span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: scenter;
+        font-weight: bold;
+    }
+    .quantityControl{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+        button {
+            background: white;
+            border: none;
+            font-size: 1.4rem;
+            margin: 1rem;
+            cursor: pointer;
+        }
+    }
+    .delete {
+        background: white;
+        border: none;
+        cursor: pointer;
+        color: $primaryColor;
+        font-size: 2rem;
+    }
+}
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cartOptions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 2rem;
+  button {
+    color: white;
+    background: $primaryColor;
+    font-size: 1rem;
+  }
+  a {
+    color: white;
+    background: $primaryColor;
+    font-size: 1rem;
+  }
+}
+
+.cartSummary {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  background: #444;
+  color: white;
+  padding: 2rem;
+  width: 30rem;
+  p {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+    border-bottom: 2px solid $primaryColor;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+  P:last-of-type{
+    font-size: 1.2rem;
+  }
+  button {
+    margin-top: 1rem;
+    color: white;
+    background: $primaryColor;
+    width: 12rem;
+  }
+}
+.cartSummary p#discountRow.hidden {
+    display: none;
+}
+#message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2rem;
+    font-size: 2rem;
+}
+

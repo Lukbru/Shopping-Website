@@ -1,0 +1,404 @@
+@use './abstracts/variables' as *;
+@use './abstracts/mixins' as *;
+@use 'abstracts/mixins';
+@use 'abstracts/variables';
+@use 'base/reset';
+@use 'base/fonts';
+@use 'components/buttons';
+@use 'components/forms';
+@use 'components/product-card';
+@use 'layouts/footer';
+@use 'layouts/header';
+@use 'pages/about';
+@use 'pages/cart';
+@use 'pages/catalog';
+@use 'pages/product-details';
+
+.home {
+    background: white;
+}
+.hero {
+    background: rgb(180, 179, 179);
+    padding: 4rem 0 7rem;
+    &Inner {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        align-items: center;
+        gap: 4rem;
+    }
+    &Content p {
+        margin-bottom: 1.5rem;
+        width: 140%;
+    }
+    &Content h1{
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    &Image img {
+        width: 100%;
+        height: auto;
+        min-height: 24rem;
+        object-fit: contain;
+    }
+}
+.homeCardPromo {
+    margin-top: -4rem;
+    &Grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+    &Discount {
+        min-height: 30rem;
+        padding: 2rem;
+        background: rgb(112, 108, 108);
+        color: white;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5)), url("../src/assets/images/Homepage/suitcases main banner.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &About {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       min-height: 30rem;
+       padding: 2rem;
+       background: #fff;
+    }
+    &Author {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        img {
+            width: 60px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        h3 {
+            font-size: 1.2rem;
+        }
+        p {
+           font-size: 0.8rem; 
+        }
+    }
+    h2 {
+        font-size: 2rem;
+        font-weight: 900;
+        margin-bottom: 1rem;
+    }
+    p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+        color: grey;
+    }
+    &DiscountContent {
+        h2 {
+            font-size: 2rem;
+        }
+        p {
+            color: white;
+        }
+    }
+}
+.homeSection {
+    padding: 4rem;
+    text-align: center;
+    .sectionHeading{
+        margin-bottom: 2rem;
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    p {
+        font-size: 0.9rem;
+        color: grey;}
+}
+}
+.travelGrid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+    .travelCard {
+        background: rgb(219, 209, 209);
+        min-height: 20rem;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        p {
+            color: grey;
+            font-size: 0.9rem;
+        }
+    }
+}
+.productSection {
+    padding: 4rem;
+    .sectionHeading{
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    p {
+        font-size: 0.9rem;
+        color: grey;
+    }
+}
+.productGrid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+}
+.product {
+    padding: 1rem;
+    text-align: center;
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        min-height: 200px;
+    }
+    h3 {
+        margin-top: 1rem;
+    }
+    p {
+        color: grey;
+        font-size: 0.9rem;
+        margin: 1rem;
+    }
+}
+.homeBanner {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    &Inner {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5)), url("../src/assets/images/Homepage/offer of the month image.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        
+        min-height: 200px;
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+        flex-wrap: wrap;
+        padding: 2rem;
+    }
+ &Inner > div:first-child {
+    flex: 0 0 50%;
+    text-align: center;
+    color:white;
+    .homeBannerText  {
+        font-size: 12rem;
+        font-weight: bold;
+    }
+    p {
+        font-size: 0.9rem;
+    }
+ }
+    &Content {
+        margin-left: auto;
+        flex: 0 0 40%;
+        color:white;
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        p {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+    }
+}
+.customersGrid {
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
+.customerCard {
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+    }
+    p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+    strong {
+        display: block;
+        font-size: 1.1rem;
+        color: $primaryColor;
+    }
+}
+.loginWindow {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1010;
+    &.hidden {
+        display: none;
+    }
+}
+.loginOverlay {
+    position: absolute;
+    inset: 0;
+}
+.loginContent {
+    position: relative;
+    background: white;
+    padding: 3rem;
+    width: 500px;
+    border-radius: 5px;
+    z-index: 10;
+    label {
+        display: block;
+        margin-top: 1rem;
+        font-size: 16px;
+        span {
+            color: $primaryColor;
+        }
+    }
+    input {
+        width: 100%;
+        padding: 1rem;
+        border: 2px solid $primaryColor;
+        margin-top: 0.4rem;
+    }
+}
+.passwordWrapper {
+  position: relative;
+  .togglePassword {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+}
+.loginOption {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+  font-size: 13px;
+  a {
+    color: $primaryColor;
+  }
+}
+.loginButton {
+  width: 100%;
+  margin-top: 1rem;
+  color: white;
+  background: $primaryColor;
+
+}
+.loginMessage {
+  margin-top: 1rem;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.travelSlider {
+  overflow: hidden;
+  position: relative;
+}
+
+.travelSlides {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.6s ease;
+}
+
+.travelCard {
+  min-width: calc(25% - 1rem);
+  height: 40rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.travelCard span,
+.travelCard p {
+  position: absolute;
+  left: 2rem;
+  color: white;
+}
+
+.travelCard span {
+  bottom: 12rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.travelCard p {
+  bottom: 8rem;
+  right: 2rem;
+  font-size: 1.1rem;
+  top: 30rem;
+  text-align: left;
+  line-height: 2rem;
+}
+
+.firstSuitcase {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url("../src/assets/images/Homepage/suitcase real-live.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.secondSuitcase {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url("../src/assets/images/Homepage/suitcase real-live-1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.thirdSuitcase {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url("../src/assets/images/Homepage/suitcase real-live-2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.forthSuitcase {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url("../src/assets/images/Homepage/suitcase real-live-3.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.fifthSuitcase {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url("../src/assets/images/Homepage/suitcase real-live.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@media (max-width: $tablet) {
+  .travelCard {
+    min-width: calc(50% - 10px); 
+  }
+}
+
+@media (max-width: $mobile) {
+  .travelCard {
+    min-width: 100%; 
+  }
+}

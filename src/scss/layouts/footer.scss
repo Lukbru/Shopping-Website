@@ -1,0 +1,113 @@
+@use '../abstracts/variables' as *;
+.footer {
+    background: white;
+    &Benefits {
+        padding: 2rem 0;
+        background: grey;
+        color: white;
+
+        .benefitsList {
+            padding-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 1rem;
+            text-align: center;
+            .item {
+                display: flex;
+                align-items: center;
+                
+            }
+            img {
+                width: 4.5rem;
+                height: auto;
+            }
+        }
+    }
+    .information {
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        gap: 2rem;
+        padding: 3rem 0;
+
+        .footerColumn {
+            ul {
+                list-style: none;
+                padding-top: 2rem;
+                li {
+                    margin-bottom: 0.5rem;
+                }
+
+            }
+            &.lastColumn {
+                grid-column: 5 / 7;
+                h3{
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+    }
+    .otherInfromation{
+        padding: 2rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+        .shippingInformation {
+            flex: 2;
+            h3 {
+                margin-bottom: 1rem;
+            }
+        }
+        .contactDetails {
+            flex: 1;
+            min-width: 250px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem 2rem;
+            line-height: 1.5;
+            .communication {
+                display:flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                .item {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    img {
+                        width: 1.7rem;
+                        height: auto;
+                    }
+                    p {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+            .workingHours {
+                display:flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                .item {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    img {
+                        width: 1.7rem;
+                        height: auto;
+                    }
+                    p {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+        
+    }
+    .copyright {
+        text-align: center;
+        padding: 1rem;
+        color: grey;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}

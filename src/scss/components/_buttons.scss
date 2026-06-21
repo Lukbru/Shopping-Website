@@ -1,0 +1,19 @@
+@use '../abstracts/variables' as *;
+
+.btn {
+    padding: 1rem 1rem;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+
+    &Primary {
+        background: $primaryColor;
+        color: white;
+    }
+    &OutLine {
+        border: 1px solid $primaryColor;
+        color: $primaryColor;
+    }
+}
